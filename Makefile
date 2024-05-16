@@ -1,6 +1,6 @@
 all: sudokugpu sudokucpu
 
-sudokucpu: main.cpp
-	g++ -o hammingcpu main.cpp
+sudokucpu: cpu.cpp
+	g++ -o hammingcpu cpu.cpp
 sudokugpu: 
-	nvcc  -std=c++11 -o hamminggpu bozedopomoz2_New.cu
+	nvcc  -std=c++11 -o hamminggpu gpu.cu
