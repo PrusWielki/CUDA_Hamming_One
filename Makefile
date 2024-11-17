@@ -1,6 +1,6 @@
-all: sudokugpu sudokucpu
+all: hamminggpu hammingcpu
 
-sudokucpu: cpu.cpp
-	g++ -o hammingcpu cpu.cpp
-sudokugpu: 
-	nvcc  -std=c++11 -o hamminggpu gpu.cu
+hammingcpu: cpu_hamming_distance.cpp
+	g++ -o cpu_hamming_distance cpu_hamming_distance.cpp
+hamminggpu: 
+	nvcc  -std=c++11 -o gpu_hamming_distance gpu_hamming_distance.cu
